@@ -21,6 +21,8 @@
         <activity
             android:name=".MovieActivity"
             android:theme="@style/AppTheme" />
+        <activity android:name=".ProjectsActivity"/>
     </application>
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
