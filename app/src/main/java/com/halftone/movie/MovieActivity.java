@@ -5,10 +5,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.Log;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 
 import com.halftone.GithubService;
 import com.halftone.Repo;
+import com.halftone.RepoAdapter;
 
 import java.util.List;
 
@@ -20,10 +22,14 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class MovieActivity extends Activity {
+    RecyclerView recyclerView;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie);
+        recyclerView = findViewById(R.id.rv_repos);
+
         getRepository();
     }
 
@@ -37,9 +43,10 @@ public class MovieActivity extends Activity {
         service.listRepos("rajeshkumarkhadka").enqueue(new Callback<List<Repo>>() {
             @Override
             public void onResponse(Call<List<Repo>> call, Response<List<Repo>> response) {
-                for (Repo repo : response.body()) {
-                    Log.d("repos name", repo.name);
-                }
+                RepoAdapter repoAdapter = new RepoAdapter(response.body());
+                LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MovieActivity.this);
+                recyclerView.setLayoutManager(linearLayoutManager);
+                recyclerView.setAdapter(repoAdapter);
             }
 
             @Override
