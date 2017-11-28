@@ -1,6 +1,8 @@
 package com.halftone;
 
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,9 +16,11 @@ import java.util.List;
 public class RepoAdapter extends RecyclerView.Adapter<RepoAdapter.RepoViewHolder> {
 
     private List<Repo> repoList;
+    private Context context;
 
-    public RepoAdapter(List<Repo> repos) {
+    public RepoAdapter(List<Repo> repos, Context context) {
         this.repoList = repos;
+        this.context = context;
     }
 
     @Override
@@ -26,8 +30,16 @@ public class RepoAdapter extends RecyclerView.Adapter<RepoAdapter.RepoViewHolder
     }
 
     @Override
-    public void onBindViewHolder(RepoViewHolder holder, int position) {
+    public void onBindViewHolder(RepoViewHolder holder, final int position) {
         holder.repoName.setText(repoList.get(position).name);
+        holder.repoName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, ProjectDetailActivity.class);
+                intent.putExtra("repo", repoList.get(position));
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

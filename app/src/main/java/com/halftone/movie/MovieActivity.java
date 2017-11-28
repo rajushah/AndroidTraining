@@ -43,7 +43,7 @@ public class MovieActivity extends Activity {
         service.listRepos("rajeshkumarkhadka").enqueue(new Callback<List<Repo>>() {
             @Override
             public void onResponse(Call<List<Repo>> call, Response<List<Repo>> response) {
-                RepoAdapter repoAdapter = new RepoAdapter(response.body());
+                RepoAdapter repoAdapter = new RepoAdapter(response.body(), MovieActivity.this);
                 LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MovieActivity.this);
                 recyclerView.setLayoutManager(linearLayoutManager);
                 recyclerView.setAdapter(repoAdapter);

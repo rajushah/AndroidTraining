@@ -3,6 +3,7 @@
     package="com.halftone.movie">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -22,6 +23,7 @@
         <activity
             android:name=".MovieActivity"
             android:theme="@style/AppTheme" />
+        <activity android:name="com.halftone.ProjectDetailActivity"></activity>
     </application>
 
 </manifest>
