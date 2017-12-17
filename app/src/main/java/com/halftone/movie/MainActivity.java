@@ -13,6 +13,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
+import com.halftone.GitHubActivity;
+
 public class MainActivity extends AppCompatActivity {
     private TextInputLayout mTilUsername;
     private TextInputLayout mTilPassword;
@@ -28,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle("Movie");
 
-        DashboardActivity.start(this);
+        GitHubActivity.start(this);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
