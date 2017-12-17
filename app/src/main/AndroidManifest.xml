@@ -23,7 +23,11 @@
         <activity
             android:name=".MovieActivity"
             android:theme="@style/AppTheme" />
-        <activity android:name="com.halftone.ProjectDetailActivity"></activity>
+        <activity android:name="com.halftone.ProjectDetailActivity" />
+        <activity
+            android:name=".DashboardActivity"
+            android:label="@string/title_activity_dashboard"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
