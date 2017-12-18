@@ -31,7 +31,7 @@ public class RepoAdapter extends RecyclerView.Adapter<RepoAdapter.RepoViewHolder
 
     @Override
     public void onBindViewHolder(RepoViewHolder holder, final int position) {
-        holder.repoName.setText(repoList.get(position).name);
+        //holder.repoName.setText(repoList.get(position).name);
         holder.repoName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

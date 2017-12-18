@@ -19,7 +19,7 @@ public class ProjectDetailActivity extends AppCompatActivity {
         mTvProjectDescription = findViewById(R.id.project_details_tv_description);
 
         repo = (Repo) getIntent().getExtras().getSerializable("repo");
-        mTvProjectDescription.setText(repo.description);
+        mTvProjectDescription.setText(repo.getDescription());
 
         Toast.makeText(this, "we reached here", Toast.LENGTH_LONG).show();
     }
