@@ -1,13 +1,9 @@
 package com.halftone;
 
 
-
 public class User {
-    private void showName() {
-        getGirlFriend();
-    }
-
-    private String getGirlFriend() {
-        return "Sita";
-    }
+    public String username;
+    public String address;
+    public String phone;
+    public String profession;
 }

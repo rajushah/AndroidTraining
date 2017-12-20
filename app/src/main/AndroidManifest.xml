@@ -30,7 +30,8 @@
             android:label="@string/title_activity_dashboard"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="com.halftone.GitHubActivity" />
-        <activity android:name="com.halftone.DatabaseActivity"></activity>
+        <activity android:name="com.halftone.DatabaseActivity" />
+        <activity android:name="com.halftone.SignUpActivity"></activity>
     </application>
 
 </manifest>
