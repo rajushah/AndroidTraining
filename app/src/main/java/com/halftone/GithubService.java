@@ -16,4 +16,7 @@ public interface GithubService {
     @POST("signup")
     Call<User> signup(@Body User user);
 
+    @POST
+    Call<LoginEnvelope> login(@Body UserLoginBody userLoginBody);
+
 }
