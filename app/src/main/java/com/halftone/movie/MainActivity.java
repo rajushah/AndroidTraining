@@ -13,7 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
-import com.halftone.SignUpActivity;
+import com.halftone.FragmentActivity;
 
 public class MainActivity extends AppCompatActivity {
     private TextInputLayout mTilUsername;
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle("Movie");
 
-        SignUpActivity.start(this);
+        //SignUpActivity.start(this);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -87,6 +87,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         mSubmit = findViewById(R.id.main_btn_login);
+
+        FragmentActivity.start(this);
     }
 
     public boolean validateUsername(String name) {

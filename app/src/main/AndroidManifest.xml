@@ -39,7 +39,8 @@
         <activity android:name="com.halftone.SignUpActivity" />
         <activity
             android:name=".LoginActivity"
-            android:label="@string/title_activity_login"></activity>
+            android:label="@string/title_activity_login" />
+        <activity android:name="com.halftone.FragmentActivity"></activity>
     </application>
 
 </manifest>
