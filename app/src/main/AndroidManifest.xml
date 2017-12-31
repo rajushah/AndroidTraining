@@ -18,7 +18,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="com.halftone.MovieInfoActivity"
             android:theme="@style/AppTheme.NoToolbar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,10 +37,6 @@
         <activity android:name="com.halftone.GitHubActivity" />
         <activity android:name="com.halftone.DatabaseActivity" />
         <activity android:name="com.halftone.SignUpActivity" />
-        <activity
-            android:name=".LoginActivity"
-            android:label="@string/title_activity_login" />
-        <activity android:name="com.halftone.FragmentActivity"></activity>
     </application>
 
 </manifest>
